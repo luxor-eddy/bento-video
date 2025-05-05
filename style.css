@@ -1,0 +1,130 @@
+body {
+    background-color: #000812;
+    margin: 0;
+    font-family: "Geist", sans-serif;
+}
+
+h1, h2, p {
+    margin: 0;
+}
+  
+.hero {
+    position: relative;
+    text-align: center;
+}
+  
+.video-wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+  
+.video-wrapper video {
+    width: 100%;
+    height: auto; /* Preserve aspect ratio */
+    display: block;
+}
+  
+.hero h1 {
+    color: white;
+    font-size: 60px;
+    position: absolute;
+    top: 200px;    /* distance from the top */
+    left: 200px;   /* distance from the left */
+    margin: 0;
+    z-index: 1;
+}
+  
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4vh;
+    padding: 200px;
+    box-sizing: border-box;
+}
+
+/* test */
+.card {
+    position: relative;
+    width: 368px;
+    height: 325px;
+    background-color: #000B19;
+    border-radius: 12px;
+    border: 1px solid #001C3A;
+    overflow: hidden;
+}
+.card-text {
+    padding: 24px;
+    text-align: left;
+}
+.card-text h2 {
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    padding-bottom: 4px;
+    line-height: 28px;
+}
+.card-text p {
+    font-size: 14px;
+    font-weight: 300;
+    color: #9E9E9E;
+    line-height: 20px;
+}
+.card video {
+    width: 100%;
+    height: 160px; /* You can tweak this value */
+    object-fit: cover;
+    display: block;
+    border-radius: 12px 12px 0 0;
+}
+
+.card-vid-wrapper {
+    position: relative;
+    width: 368px;
+    height: 205px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 12px 12px 0 0;
+}
+
+.card-vid-wrapper video {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* The overlay that blends the edges */
+.card-vid-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Let clicks pass through */
+    background: linear-gradient(
+      to right,
+      #000D1B 0%,     /* start: card bg color */
+      transparent 20%, /* fade in */
+      transparent 80%, /* fully visible center */
+      #000D1B 100%     /* end: card bg color */
+    );
+    z-index: 1;
+    border-radius: 12px 12px 0 0;
+}
+.card-glow {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 100px;
+    background: #0061CB;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.4;
+    z-index: 1; /* Set above card background */
+    pointer-events: none;
+}
